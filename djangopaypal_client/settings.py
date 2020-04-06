@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = "djangopaypal_client.urls"
 
 TEMPLATES = [
-    {
+    {DjangoPaypal
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
         "APP_DIRS": True,
@@ -96,7 +96,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {
+    {DjangoPaypal
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
-
+DjangoPaypal
 TIME_ZONE = "UTC"
 
 USE_I18N = True
@@ -126,10 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-STATIC_URL = "/static/"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
