@@ -25,7 +25,7 @@ SECRET_KEY = "!wi6t^84yng-xnmsgtnh*%yi-0ut**+w$26tily#6lp*-@_mhn"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [ "127.0.0.1","django-paypal.herokuapp.com"]
+ALLOWED_HOSTS = ["django-paypal.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = "djangopaypal_client.urls"
 
 TEMPLATES = [
-    {DjangoPaypal
+    {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
         "APP_DIRS": True,
@@ -71,13 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "djangopaypal_client.wsgi.application"
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-STATIC_URL = "/static/"
-MEDIA_URL = "/images/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -96,7 +90,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {DjangoPaypal
+    {
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
@@ -112,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
-DjangoPaypal
+
 TIME_ZONE = "UTC"
 
 USE_I18N = True
@@ -125,8 +119,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
