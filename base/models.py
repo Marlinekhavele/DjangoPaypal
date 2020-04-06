@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
@@ -12,14 +14,13 @@ class Product(models.Model):
 
 
 class Order(models.Model):
-    Product = models.ForeignKey(
+    product = models.ForeignKey(
         Product,
         max_length=200,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
     )
-
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

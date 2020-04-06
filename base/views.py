@@ -22,4 +22,8 @@ def checkout(request, pk):
 
 def paymentComplete(request):
     body = json.loads(request.body)
+    print("BODY:", body)
+
+    product = Product.objects.get(id=body["productId"])
+    Order.objects.create(product=product)
     return JsonResponse("Payment completed!", safe=False)
