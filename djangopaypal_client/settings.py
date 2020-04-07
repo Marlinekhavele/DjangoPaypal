@@ -25,7 +25,7 @@ SECRET_KEY = "!wi6t^84yng-xnmsgtnh*%yi-0ut**+w$26tily#6lp*-@_mhn"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["django-paypal.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["marline.pythonanywhere.com", "127.0.0.1"]
 
 
 # Application definition
